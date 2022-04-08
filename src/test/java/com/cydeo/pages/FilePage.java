@@ -19,7 +19,7 @@ public class FilePage {
     public WebElement fileName;
 
     @FindBy(xpath = "//span[@class='icon icon-more']")
-    public WebElement actionicon;
+    public WebElement actionIcon;
 
     public void clickSubModule(String subModuleName){
         Driver.getDriver().findElement(By.xpath("//a[.='"+subModuleName+"']")).click();
