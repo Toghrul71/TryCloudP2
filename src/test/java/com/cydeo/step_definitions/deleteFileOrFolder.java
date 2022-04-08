@@ -26,6 +26,7 @@ public class deleteFileOrFolder {
     public void the_user_clicks_the_module(String module) {
     dashBoardPage.clickModule(module); // Files
     }
+
     @When("user click action-icon from any file on the page")
     public void user_click_action_icon_from_any_file_on_the_page() {
         WebElement fileName=Driver.getDriver().findElement(By.xpath("(//label[contains (@for, 'select-files')])[1]"));
