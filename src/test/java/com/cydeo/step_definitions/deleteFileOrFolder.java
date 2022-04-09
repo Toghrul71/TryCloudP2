@@ -11,7 +11,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
@@ -56,13 +59,20 @@ public class deleteFileOrFolder {
     @Then("Verify the deleted file is displayed on the page.")
     public void verify_the_deleted_file_is_displayed_on_the_page() {
 
-        List<WebElement> eachText=deletedFilePage.eachDeleted;
-        for (WebElement each : eachText) {
+
+        for (WebElement each : deletedFilePage.eachDeleted) {
             Assert.assertEquals(each.getText(),textOfFile);
+
+
+
+
+
+
+            }
 
         }
 
     }
-}
+
 
 //step1 added
